@@ -1,0 +1,181 @@
+/* OTP Verification Styles */
+.verification-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.verification-content {
+  text-align: center;
+}
+
+.email-sent-info {
+  margin-bottom: 2rem;
+}
+
+.email-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: bounceIn 0.6s ease;
+}
+
+.user-email {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+/* OTP Input Styles */
+.otp-input-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.otp-input {
+  width: 45px;
+  height: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(128, 203, 196, 0.2);
+  outline: none;
+}
+
+.otp-input.filled {
+  border-color: var(--primary-color);
+  background: rgba(128, 203, 196, 0.1);
+}
+
+/* Verification Actions */
+.verification-actions {
+  margin-bottom: 2rem;
+}
+
+.verify-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.verify-btn:hover {
+  background: #4db6ac;
+  transform: translateY(-2px);
+}
+
+.verify-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--bg-dark);
+  animation: spin 1s linear infinite;
+}
+
+.verify-btn.loading .btn-text {
+  display: none;
+}
+
+.verify-btn.loading .loading-spinner {
+  display: block;
+}
+
+/* Resend Code Section */
+.resend-code {
+  margin-top: 2rem;
+  color: var(--text-gray);
+}
+
+.resend-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.resend-btn:hover {
+  color: #4db6ac;
+}
+
+.resend-btn:disabled {
+  color: var(--text-gray);
+  cursor: not-allowed;
+}
+
+.countdown {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+/* Animations */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .otp-input-group {
+    gap: 0.25rem;
+  }
+
+  .otp-input {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+}

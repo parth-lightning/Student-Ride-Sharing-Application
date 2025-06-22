@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - Student Ride Sharing</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dark-theme">
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about-us">About Us</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html" class="active">Signup</a></li>
+      </ul>
+    </nav>
+
+    <div class="form-container">
+      <div class="form-box">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="prn">PRN</label>
+            <input
+              type="text"
+              id="prn"
+              name="prn"
+              placeholder="Enter your 8-digit PRN"
+              pattern="\d{8}"
+              title="Please enter exactly 8 digits for your PRN"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your VIT email (e.g., student@vit.edu)"
+              pattern="[a-zA-Z0-9._%+-]+@vit\.edu$"
+              title="Please enter a valid VIT email address (@vit.edu)"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+              <option value="">Select your role</option>
+              <option value="rider">Rider</option>
+              <option value="passenger">Passenger</option>
+            </select>
+          </div>
+
+          <div class="vehicle-info" id="vehicleInfo" style="display: none">
+            <div class="input-group">
+              <label for="license">Vehicle License</label>
+              <input
+                type="text"
+                id="license"
+                name="license"
+                placeholder="Enter your vehicle license"
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="vehicle">Vehicle Number</label>
+              <input
+                type="text"
+                id="vehicle"
+                name="vehicle"
+                placeholder="Enter your vehicle number (e.g., MH12AB1234)"
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              required
+            />
+          </div>
+
+          <button type="submit" class="btn">Sign Up</button>
+        </form>
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

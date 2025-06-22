@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Student Ride Sharing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrc9DTG8FqPuN_kWDtuszksZIwXvxuYek&libraries=places"></script>
+  </head>
+  <body class="dark-theme">
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="user-info">
+          <div class="user-avatar">👤</div>
+          <h3 id="userName">Demo User</h3>
+          <p id="userEmail">demo@example.com</p>
+        </div>
+        <ul class="sidebar-menu">
+          <li><a href="#dashboard" class="active">Dashboard</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="index.html" onclick="handleLogout(event)">Logout</a></li>
+        </ul>
+      </aside>
+
+      <main class="main-content">
+        <div class="dashboard-header">
+          <h1>Dashboard</h1>
+          <div class="action-buttons">
+            <button class="action-btn search-btn" onclick="showSearchModal()">
+              🔍 Search Rides
+            </button>
+            <button class="new-ride-btn" onclick="showNewRideModal()">
+              + Post New Ride
+            </button>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Rides</h3>
+            <p class="stat-number" data-stat="totalRides">12</p>
+          </div>
+          <div class="stat-card">
+            <h3>Money Saved</h3>
+            <p class="stat-number" data-stat="moneySaved">$45</p>
+          </div>
+          <div class="stat-card">
+            <h3>Completed</h3>
+            <p class="stat-number" data-stat="completed">10</p>
+          </div>
+          <div class="stat-card">
+            <h3>Rating</h3>
+            <p class="stat-number" data-stat="rating">4.8</p>
+          </div>
+        </div>
+
+        <div class="rides-section">
+          <h2>Previous Rides</h2>
+          <div id="rides-list" class="rides-grid">
+            <!-- Previous rides will be populated here -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="haversine.js" type="module"></script>
+  </body>
+</html>

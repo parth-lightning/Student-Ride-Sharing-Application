@@ -1,0 +1,227 @@
+/* General Styles */
+:root {
+  --primary-color: #80cbc4;
+  --bg-dark: #121212;
+  --bg-card: #1e1e1e;
+  --text-light: #f5f5f5;
+  --text-gray: #888;
+  --error-color: #ff4444;
+  --success-color: #4caf50;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Navigation */
+.nav-links {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--primary-color);
+  color: var(--bg-dark);
+}
+
+/* Form Container */
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: url('image.webp') center/cover no-repeat fixed;
+}
+
+.form-box {
+  background: rgba(30, 30, 30, 0.95);
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-box h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* Form Elements */
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: var(--text-light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(128, 203, 196, 0.2);
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #4db6ac;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+/* Messages */
+.error-message {
+  color: var(--error-color);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.success-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--success-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 4px;
+  animation: slideIn 0.3s ease-out;
+  z-index: 1000;
+}
+
+/* Links */
+.login-link,
+.signup-link {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.login-link a,
+.signup-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover,
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Demo Accounts */
+.demo-accounts {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: rgba(128, 203, 196, 0.1);
+  border-radius: 4px;
+}
+
+.demo-credentials {
+  color: var(--text-gray);
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    padding: 0.5rem 0;
+    gap: 1rem;
+  }
+
+  .form-box {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.8rem;
+  }
+}
+
+/* Vehicle Info Section */
+.vehicle-info {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}

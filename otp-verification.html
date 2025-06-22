@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification - Student Ride Sharing</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="otp-verification.css" />
+  </head>
+  <body class="dark-theme">
+    <div class="form-container">
+      <div class="form-box">
+        <div class="verification-header">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3774/3774270.png"
+            alt="Logo"
+            class="logo-img"
+          />
+          <h2>Email Verification</h2>
+        </div>
+
+        <div class="verification-content">
+          <div class="email-sent-info">
+            <div class="email-icon">📧</div>
+            <p>We've sent a verification code to</p>
+            <p class="user-email" id="userEmailDisplay">user@example.com</p>
+          </div>
+
+          <form id="otpForm" class="otp-form">
+            <div class="otp-input-group">
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="1"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="2"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="3"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="4"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="5"
+              />
+              <input
+                type="text"
+                maxlength="1"
+                class="otp-input"
+                data-index="6"
+              />
+            </div>
+
+            <div class="verification-actions">
+              <button type="submit" class="btn verify-btn">
+                <span class="btn-text">Verify Email</span>
+                <div class="loading-spinner"></div>
+              </button>
+            </div>
+          </form>
+
+          <div class="resend-code">
+            <p>Didn't receive the code?</p>
+            <button id="resendBtn" class="resend-btn">
+              Resend Code
+              <span id="countdown" class="countdown"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="otp-verification.js"></script>
+  </body>
+</html>
